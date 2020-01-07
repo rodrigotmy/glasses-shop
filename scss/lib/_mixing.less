@@ -1,0 +1,30 @@
+.limt-contnr-primry() {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.limt-contnr-secd() {
+  max-width: @width-contnr;
+  width: 100%;
+}
+
+
+// buttons
+.bttn-style-basic() {
+  width: @width-bttn;
+  height: @height-bttn;
+  border: @brd-bttn @color-bttn-basic;
+  border-radius: @brd-rds-bttn;
+  background-color: @color-bttn-basic;
+  color: @color-txt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: @font-fmly-secnd;
+  &:hover {
+    cursor: pointer;
+    // background-color: @color-bttn-basic;
+    // color: @color-bttn-bckgrnd;
+  }
+}
