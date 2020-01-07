@@ -6,47 +6,41 @@
 @import "base/_navbar.less";
 @import "base/_layout.less";
 
+.header-main {
+  .page-max-width(70px);
+  background-color: @color-bckgrnd;
+}
+
+.contnr-hedr {
+  background-color: inherit;
+  .contnr-max-width(@width-contnr, inherit);
+  .align-contnt-flexbox-row(space-between)
+}
+
 .hero {
   .page-max-width(400px);
-  display: flex;
-  justify-content: center;
+  .align-contnt-flexbox-center;
   position: relative;
 }
 
 .contnr-into-hero {
-  .contnr-max-width(960px, inherit);
+  .contnr-into-max-width(960px, inherit);
   position: absolute;
 }
 
 .hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  // hacer un mixins para estas reglas
+  .image-cover;
 }
 
 .filtr-img {
-  background-color: rgba(0, 0, 0, .2);
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  // hacer un mixins para estas reglas
-
+  .color-bckgrnd-contnr-delay;
 }
 
 .form-accss {
   width: 45%;
   height: 400px;
-  // background-color: rgba(0, 0, 0, .2);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-evenly;
-  // hacer un mixins para flexbox
-
+  .align-contnt-flexbox-column(space-evenly, flex-end);
 }
 
 .txt-hero {
@@ -54,19 +48,14 @@
   color: #FFF;
   font-size: 16px;
   font-family: 'Segoe UI';
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  .align-contnt-flexbox-column(@justify-contnt, flex-end);
   text-align: end;
-  // hacer un mixins para estas reglas
-
 }
 
 .form-bttns {
   width: 350px;
   height: auto;
-  display: flex;
-  justify-content: space-between;
+  .align-contnt-flexbox-row(space-between);
 }
 
 .menu-servcs {
@@ -77,35 +66,25 @@
 .prodcts-gendr {
   width: 100%;
   height: 350px;
-  display: flex;
-  justify-content: center;
+  .align-contnt-flexbox-center;
 }
 
 .limt-cat {
-  height: inherit;
-  align-items: center;
-  width: 678px;
-  display: flex;
-  justify-content: space-evenly;
+  .contnr-max-width(678px, inherit);
+  .align-contnt-flexbox-row(space-evenly);
 }
-
-
 
 .accesorios {
   .contnr-max-width(768px, 300px);
-  display: flex;
-  align-items: center;
+  .align-contnt-flexbox-center;
 }
 
 .otros-items {
   width: 100%;
   height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.cntnr-lyt-c4 {
+.contnr-lyt-c4 {
   // cambiar nombre de clase y llamar parcial lyt
 
   width: 768px;
@@ -115,9 +94,7 @@
 .item-accsors {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .align-contnt-flexbox-center;
 }
 
 .img-itm-acc {
@@ -128,26 +105,17 @@
 
 .img-itm-acc img {
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  .image-cover;
 }
-
 
 .ofertas {
   .page-max-width(335px);
+  .align-contnt-flexbox-row(center, flex-end);
   background-color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.limt-ofertas {
-  .contnr-max-width(@width-contnr - 64px, auto);
 }
 
-.lyt-ofertas {
-  // border: 1px solid green;
+.limt-ofertas {
+  .contnr-into-max-width(960px);
 }
 
 .img-ofer {
@@ -156,19 +124,13 @@
 }
 
 .img-ofer img {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-  object-position: center;
+  .image-cover;
 }
 
 .descrp-ofer {
+  .align-contnt-flexbox-column(space-between);
   font-family: @font-fmly-prmry;
   color: #FFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   padding-bottom: 60px;
 }
 
@@ -186,17 +148,9 @@ p.txt-ofer {
   display: block;
 }
 
-// p.text-dscrp {
-//   margin: 25px 0;
-// }
-
-
-
 .footer-main {
   .page-max-width;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .align-contnt-flexbox-column;
   background-color: @color-primary;
   color: #FFF;
   font-family: 'Segoe UI';
@@ -204,11 +158,10 @@ p.txt-ofer {
 }
 
 .lyt-footer {
-  .contnr-max-width;
+  .contnr-into-max-width;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: inherit;
-  // background-color: green;
 }
 
 h1.ttl-item {
@@ -223,18 +176,14 @@ p.descrp-item {
 
 .copy {
   .page-max-width(50px);
-  .contnt-align-flexbox;
-  background-color: @color-prmry-xtr;
-  
+  .align-contnt-flexbox(row);
+  background-color: @color-prmry-xtr; 
 }
 
 .social-media {
-  // border: 1px solid green;
   height: 45px;
   width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .align-contnt-flexbox-row(space-between);
 }
 
 .itm-sm {

@@ -2,6 +2,15 @@
   width: 100%;
   height: @max-height;
 }
+
+// un mixin para establecer alineación personalizada cuando es más de un elemento.
+.contnr-into-max-width(@max-width: @width-contnr, @max-height: @height-contnr) {
+  max-width: @max-width;
+  width: 100%;
+  height: @max-height;
+}
+
+// un mixin para establecer un centrado cuando es un solo contenedor (se aplica a él mismo).
 .contnr-max-width(@max-width: @width-contnr, @max-height: @height-contnr) {
   max-width: @max-width;
   width: 100%;
@@ -9,11 +18,56 @@
   margin-left: auto;
   margin-right: auto;
 }
-.contnt-align-flexbox(@justify: @justify-contnt, @align: @align-itms) {
+
+// Flexbox
+
+// Posible solución, crear mixins para flex-direction column y row 
+.align-contnt-flexbox-row(@justify: @justify-contnt, @align: @align-itms, @direction: @direction-row) {
   display: flex;
   justify-content: @justify;
   align-items: @align;
+  flex-direction: @direction;
 }
+
+.align-contnt-flexbox-column(@justify: @justify-contnt, @align: @align-itms, @direction: @direction-column) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+  flex-direction: @direction;
+}
+
+// mixin que centra en justify/align cuando el contnr es flexbox
+.align-contnt-flexbox-center() {
+  display: flex;
+  justify-content: @justify-contnt;
+  align-items: @align-itms;
+}
+
+// Un mixin para row/column.
+// se tendra que especificar la dirección cuando se llama
+// justify y align contienen valor center definido.
+.align-contnt-flexbox(@direction, @justify: @justify-contnt, @align: @align-itms) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.image-cover() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.color-bckgrnd-contnr-delay() {
+  background-color: @bckgrnd-delay;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 
 // buttons
 .bttn-style-basic() {

@@ -3,26 +3,13 @@
   margin:0;
 }
 
-.header-main {
-  .page-max-width;
-  background-color: @color-bckgrnd;
-  height: 70px;
-}
-
-.cntnr-hedr {
-  .contnr-max-width;
-  height: inherit;
-  background-color: @color-bckgrnd;
-  .contnt-align-flexbox(space-between)
-}
-
 .logo-web {
   height: 55px;
   width: 55px;
   background-color: #FFF;
   border-radius: 50%;
 }
-
+// no contiene color nav, ul.
 nav.navbar-main {
   height: inherit;
   width: auto;
@@ -46,9 +33,7 @@ ul > li.item-mn {
 a.link-item {
   height: inherit;
   width: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .align-contnt-flexbox-center;
   text-decoration: none;
   color: @color-txt-itm;
 }
@@ -60,7 +45,8 @@ a.active {
 a.link-item:hover {
   color: @color-itm-hover;
   background-color: @color-bckgrnd-itm-hover;
-  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 ul.submenu {
@@ -76,6 +62,11 @@ ul.submenu li.itm-mn {
   width: inherit;
   list-style: none;
   height: 45px;
+}
+
+ul.submenu li.itm-mn:last-child {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .item-mn:hover ul.submenu {
