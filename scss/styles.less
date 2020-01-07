@@ -1,24 +1,20 @@
 @import "lib/_variables.less";
-@import "lib/_mixing.less";
+@import "lib/_mixins.less";
+
 @import "base/_buttons.less";
 @import "base/_positions.less";
 @import "base/_navbar.less";
-@import "base/_layouts.less";
-
+@import "base/_layout.less";
 
 .hero {
-  width: 100%;
-  height: 400px;
-  // background-color: orange;
+  .page-max-width(400px);
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.cntnr-limt-hero {
-  max-width: 960px;
-  width: 100%;
-  height: inherit;
+.contnr-into-hero {
+  .contnr-max-width(960px, inherit);
   position: absolute;
 }
 
@@ -27,6 +23,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  // hacer un mixins para estas reglas
 }
 
 .filtr-img {
@@ -36,6 +33,8 @@
   left: 0;
   right: 0;
   bottom: 0;
+  // hacer un mixins para estas reglas
+
 }
 
 .form-accss {
@@ -46,6 +45,8 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-evenly;
+  // hacer un mixins para flexbox
+
 }
 
 .txt-hero {
@@ -57,6 +58,8 @@
   flex-direction: column;
   align-items: flex-end;
   text-align: end;
+  // hacer un mixins para estas reglas
+
 }
 
 .form-bttns {
@@ -79,7 +82,6 @@
 }
 
 .limt-cat {
-  // border: 1px solid green;
   height: inherit;
   align-items: center;
   width: 678px;
@@ -89,21 +91,25 @@
 
 
 
-.accesorios,
+.accesorios {
+  .contnr-max-width(768px, 300px);
+  display: flex;
+  align-items: center;
+}
+
 .otros-items {
   width: 100%;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: lightgrey;
-  
 }
 
 .cntnr-lyt-c4 {
+  // cambiar nombre de clase y llamar parcial lyt
+
   width: 768px;
   height: 60%;
-  // background-color: orange;
 }
 
 .item-accsors {
@@ -130,19 +136,14 @@
 
 
 .ofertas {
-  .limt-contnr-primry;
-
-  height: 335px;
-  // width: 100%;
+  .page-max-width(335px);
   background-color: lightgrey;
-}
-.limt-ofertas {
-  height: 335px;
-  .limt-contnr-secd;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  // background-color: red;
+}
+.limt-ofertas {
+  .contnr-max-width(@width-contnr - 64px, auto);
 }
 
 .lyt-ofertas {
@@ -168,7 +169,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
 h1 strong {
@@ -176,12 +177,12 @@ h1 strong {
 }
 
 h1.ttl-ofer {
-  font-size: 36px;
+  font-size: 32px;
   display: block;
 }
 
 p.txt-ofer {
-  font-size: 14px;
+  font-size: 16px;
   display: block;
 }
 
@@ -192,8 +193,7 @@ p.txt-ofer {
 
 
 .footer-main {
-  width: 100%;
-  height: auto;
+  .page-max-width;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,17 +203,12 @@ p.txt-ofer {
   border-top: 4px solid #EAD252;
 }
 
-.contnr-limt {
-  max-width: 1024px;
-  width: 100%;
-  background-color: inherit;
-  // background-color: green;
-}
-
-.item-info {
+.lyt-footer {
+  .contnr-max-width;
   padding-top: 50px;
   padding-bottom: 50px;
-  // background-color: red;
+  background-color: inherit;
+  // background-color: green;
 }
 
 h1.ttl-item {
@@ -224,17 +219,13 @@ h1.ttl-item {
 p.descrp-item {
   font-size: 14px;
   margin-bottom: 10px;
-  // letter-spacing: -.2px;
-
 }
 
 .copy {
-  height: 50px;
-  width: 100%;
+  .page-max-width(50px);
+  .contnt-align-flexbox;
   background-color: @color-prmry-xtr;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .social-media {

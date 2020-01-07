@@ -1,13 +1,19 @@
-.limt-contnr-primry() {
+.page-max-width(@max-height: @height-contnr) {
   width: 100%;
+  height: @max-height;
+}
+.contnr-max-width(@max-width: @width-contnr, @max-height: @height-contnr) {
+  max-width: @max-width;
+  width: 100%;
+  height: @max-height;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contnt-align-flexbox(@justify: @justify-contnt, @align: @align-itms) {
   display: flex;
-  justify-content: center;
+  justify-content: @justify;
+  align-items: @align;
 }
-.limt-contnr-secd() {
-  max-width: @width-contnr;
-  width: 100%;
-}
-
 
 // buttons
 .bttn-style-basic() {
