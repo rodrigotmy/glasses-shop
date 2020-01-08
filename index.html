@@ -16,15 +16,15 @@
       <img src="images/logo-instagram.png" alt="" class="logo-web">
       <nav class="navbar-main">
         <ul class="menu-nb">
-          <li class="item-mn"><a href="#Home" class="link-item active">Home</a></li>
-          <li class="item-mn"><a href="#Genere" class="link-item">Genere</a>
+          <li class="item-mn"><a href="#Inicio" class="link-item active">Inicio</a></li>
+          <li class="item-mn"><a href="#Genero" class="link-item">Genero</a>
             <ul class="submenu">
-              <li class="itm-mn"><a href="#Male" class="link-item">Male</a></li>
-              <li class="itm-mn"><a href="#Female" class="link-item">Female</a></li>
+              <li class="itm-mn"><a href="#Mujer" class="link-item">Mujer</a></li>
+              <li class="itm-mn"><a href="#Hombre" class="link-item">Hombre</a></li>
             </ul>
           </li>
           <li class="item-mn"><a href="#Popular" class="link-item">Popular</a></li>
-          <li class="item-mn"><a href="#News" class="link-item">News</a>
+          <li class="item-mn"><a href="#Marcas" class="link-item">Marcas</a>
             <ul class="submenu">
               <li class="itm-mn"><a href="#Casual" class="link-item">Casual</a></li>
               <li class="itm-mn"><a href="#Punk" class="link-item">Punk</a></li>
@@ -32,13 +32,13 @@
               <li class="itm-mn"><a href="#Hardstyle" class="link-item">Hardstyle</a></li>
             </ul>
           </li>
-          <li class="item-mn"><a href="#Sales" class="link-item">Sales</a></li>
-          <li class="item-mn"><a href="#contact" class="link-item">Contact</a></li>
+          <li class="item-mn"><a href="#Ventas" class="link-item">Ventas</a></li>
+          <li class="item-mn"><a href="#Contacto" class="link-item">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  
+
   <div class="hero">
     <img src="images/hr-mn.jpg" alt="">
     <div class="filtr-img"></div>
@@ -53,31 +53,17 @@
           </span>
         </div>
         <div class="form-bttns">
-          <a class="bttn-basic">Iniciar sesión</a>
-          <div class="bttn-basic alert">Registrarse</div>
+          <a class="button-basic login">Iniciar sesión</a>
+          <div class="button-basic signin">Registrarse</div>
         </div>
       </div>
     </div>
   </div>
-  <!-- <div class="elements">
-    <div class="bttn-primary">Iniciar sesión</div>
-    <br>
-    <a href="#signin" class="bttn-primary color-secnd">Registrarse</a>
-    <br>
-    <a href="#alert" class="bttn-primary alert">Cancelar</a>
-    <br>
-    <a href="#gallery" class="cntnr-one">
-      <div class="cntnr-secnd">
-        <img src="images/hero.jfif" alt="">
-      </div>
-      <div class="cntnr-delay">Galeria</div>
-    </a>
-  </div> -->
 
-  <div class="prodcts-gendr">
-    <div class="titl-work-popular">
-      <h1 class="txt-titl">Exploremos un poco</h1>
-      <span class="descrp-wrk-popular">
+  <div class="category">
+    <div class="header-category">
+      <h1 class="txt-title">Exploremos un poco</h1>
+      <span class="txt-descrp">
         Elije una categoria para buscar según tu genero o bien, puedes buscar en otras categorias.
       </span>
     </div>
@@ -97,10 +83,10 @@
     </div>
   </div>
 
-  <div class="work-popular">
-    <div class="titl-work-popular">
-      <h1 class="txt-titl">Lo más popular</h1>
-      <span class="descrp-wrk-popular">
+  <div class="popular" id="Popular">
+    <div class="header-popular">
+      <h1 class="txt-title">Lo más popular</h1>
+      <span class="txt-descrp">
         A continuación una colección de los productos para mujeres más popular vendidos durante este verano 2019
       </span>
     </div>
@@ -129,7 +115,7 @@
   </div>
 
   <div class="brand">
-    <div class="titl-brand">
+    <div class="header-brand">
       <h1 class="txt-titl-brand">Principales marcas</h1>
       <span class="descrp-brand">
         Estas son las principales marcas comerciales con las que contamos.
@@ -179,21 +165,21 @@
     </div>
   </div>
 
-  <div class="contnr-noti">
-    <div class="titl-work-popular">
-      <h1 class="txt-titl">Recibir notificaciones</h1>
-      <span class="descrp-wrk-popular">
+  <div class="notificaciones">
+    <div class="header-noti">
+      <h1 class="txt-titl-noti">Recibir notificaciones</h1>
+      <span class="txt-descrp-noti">
         Desea recibir notificaciones sobre la nuevos productos, ofertas, descuentos y mucho más.
         Ingrese su email y nosotros le pondremos al tanto.
       </span>
     </div>
-    <form action="" class="form-noti">
-      <input type="email" class="input-email-noti" placeholder="Correo electrónico">
+    <form action="#notificaciones" class="form-noti">
+      <input type="email" class="input-email-noti" placeholder="Correo electrónico" maxlength="50" required>
       <button type="submit" class="button-send-noti">Enviar</button>
     </form>
   </div>
 
-  <footer class="footer-main" id="contact">
+  <footer class="footer-main" id="Contacto">
     <div class="lyt-footer">
       <div class="item-info">
         <h1 class="ttl-item">SOBRE NOSOTROS</h1>
@@ -221,7 +207,7 @@
         </p>
       </div>
       <div class="item-info">
-        <h1 class="ttl-item">SOBRE NOSOTROS</h1>
+        <h1 class="ttl-item">REDES SOCIALES</h1>
         <p class="descrp-item">
           Esto es texto temporal que se usara para representar el
           texto de cada uno delos skills frontend. El texto de cada uno delos skills frontend.
