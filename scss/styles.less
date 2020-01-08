@@ -21,6 +21,8 @@
   .page-max-width(400px);
   .align-contnt-flexbox-center;
   position: relative;
+  margin-bottom: 50px;
+
 }
 
 .contnr-into-hero {
@@ -64,20 +66,43 @@
 }
 
 .prodcts-gendr {
-  width: 100%;
-  height: 350px;
-  .align-contnt-flexbox-center;
+  .contnr-max-width(960px);
+  // border: 1px solid green;
+  margin-bottom: 50px;
 }
 
-.limt-cat {
-  .contnr-max-width(678px, inherit);
-  .align-contnt-flexbox-row(space-evenly);
+.contnr-lyt-category {
+  .contnr-max-width(768px);
+}
+
+.itm-lyt-category {
+  position: relative;
+  border-radius: @brd-rds-bttn;
+  // border: 1px solid orange;
+  font-family: @font-fmly-secnd;
+}
+.img-itm-lyt {
+  border-radius: @brd-rds-bttn;
+}
+
+.contnr-delay {
+  position: absolute;
+  .align-contnt-flexbox-center;
+  color: #FFF;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  text-decoration: none;
+  top: 185px;
+  height: 65px;
+  width: 100%;
+  background-color: @color-bckgrnd-cntnr-delay;
 }
 
 .work-popular {
   // border: 1px solid green;
   .page-max-width;
 }
+
 
 .titl-work-popular {
   .contnr-max-width(600px, 120px);
@@ -90,13 +115,78 @@
 }
 
 .brand {
-  .contnr-max-width(768px, 300px);
+  .contnr-max-width(960px, 300px);
   .align-contnt-flexbox-center;
+  // border: 1px solid red;
 }
 
-.otros-items {
-  width: 100%;
-  height: 300px;
+.titl-brand {
+  font-family: @font-fmly-prmry;
+  color: @color-primary;
+  margin-right: 50px;
+}
+
+.notificaciones {
+  .page-max-width(300px);
+  // border: 1px solid green;
+  .align-contnt-flexbox-column;
+}
+
+.contnr-into-noti {
+  .contnr-into-max-width(960px, inherit);
+  .align-contnt-flexbox-column(space-evenly);
+  // border: 2px solid red;
+}
+.contnr-into-noti .titl-work-popular {
+  // .align-contnt-flexbox-column(space-evenly, flex-start);
+  // text-align: left;
+  // color: @color-bttn-alert;
+}
+
+.notificaciones .titl-work-popular {
+  margin-bottom: initial;
+}
+
+.form-noti {
+  // border: 1px solid orange;
+  .align-contnt-flexbox-row(space-between);
+  .contnr-into-max-width(72%);
+  // background-color: orange
+}
+
+.box-email {
+  width: 450px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  height: 23px;
+  border: none;
+  border: 1px solid @color-bttn-alert;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: @font-fmly-prmry;
+  color: @color-bttn-alert;
+  &:hover {
+    border: 2px solid @color-bttn-alert;
+
+  }
+}
+.button-send {
+  width: 200px;
+  height: 45px;
+  border: none;
+  border: 1px solid @color-bttn-alert;
+  color: @color-bttn-alert;
+  background-color: #FFF;
+  font-size: 16px;
+  font-family: @font-fmly-prmry;
+
+  border-radius: 4px;
+  &:hover {
+    background-color: @color-bttn-alert;
+    color: #FFF;
+    cursor: pointer;
+  }
 }
 
 .contnr-lyt-brand {
