@@ -2,27 +2,29 @@
 @import "lib/_mixins.less";
 
 @import "base/_buttons.less";
-@import "base/_positions.less";
+@import "base/_inputs.less";
 @import "base/_navbar.less";
 @import "base/_layout.less";
 
+
+// header
 .header-main {
   .page-max-width(70px);
   background-color: @color-bckgrnd;
 }
 
 .contnr-hedr {
-  background-color: inherit;
   .contnr-max-width(@width-contnr, inherit);
-  .align-contnt-flexbox-row(space-between)
+  .align-contnt-flexbox-row(space-between);
+  background-color: inherit;
 }
 
+// hero
 .hero {
   .page-max-width(400px);
   .align-contnt-flexbox-center;
+  .margin-bttm-contnr;
   position: relative;
-  margin-bottom: 50px;
-
 }
 
 .contnr-into-hero {
@@ -60,27 +62,23 @@
   .align-contnt-flexbox-row(space-between);
 }
 
-.menu-servcs {
-  width: 100%;
-  height: 350px;
-}
+// categorias
 
 .prodcts-gendr {
   .contnr-max-width(960px);
-  // border: 1px solid green;
-  margin-bottom: 50px;
+  .margin-bttm-contnr;
 }
 
 .contnr-lyt-category {
-  .contnr-max-width(768px);
+  .contnr-max-width(700px);
 }
 
 .itm-lyt-category {
   position: relative;
   border-radius: @brd-rds-bttn;
-  // border: 1px solid orange;
   font-family: @font-fmly-secnd;
 }
+
 .img-itm-lyt {
   border-radius: @brd-rds-bttn;
 }
@@ -92,32 +90,33 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   text-decoration: none;
-  top: 185px;
-  height: 65px;
+  top: 150px;
+  height: 50px;
   width: 100%;
   background-color: @color-bckgrnd-cntnr-delay;
 }
 
+
+// popular
+
 .work-popular {
-  // border: 1px solid green;
   .page-max-width;
 }
-
 
 .titl-work-popular {
   .contnr-max-width(600px, 120px);
   .align-contnt-flexbox-column(space-evenly);
   margin-bottom: 30px;
-  // border: 1px solid red;
   text-align: center;
   font-family: @font-fmly-prmry;
   color: @color-primary;
 }
 
+// marcas productos
+
 .brand {
   .contnr-max-width(960px, 300px);
   .align-contnt-flexbox-center;
-  // border: 1px solid red;
 }
 
 .titl-brand {
@@ -126,72 +125,8 @@
   margin-right: 50px;
 }
 
-.notificaciones {
-  .page-max-width(300px);
-  // border: 1px solid green;
-  .align-contnt-flexbox-column;
-}
-
-.contnr-into-noti {
-  .contnr-into-max-width(960px, inherit);
-  .align-contnt-flexbox-column(space-evenly);
-  // border: 2px solid red;
-}
-.contnr-into-noti .titl-work-popular {
-  // .align-contnt-flexbox-column(space-evenly, flex-start);
-  // text-align: left;
-  // color: @color-bttn-alert;
-}
-
-.notificaciones .titl-work-popular {
-  margin-bottom: initial;
-}
-
-.form-noti {
-  // border: 1px solid orange;
-  .align-contnt-flexbox-row(space-between);
-  .contnr-into-max-width(72%);
-  // background-color: orange
-}
-
-.box-email {
-  width: 450px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  height: 23px;
-  border: none;
-  border: 1px solid @color-bttn-alert;
-  border-radius: 4px;
-  font-size: 16px;
-  font-family: @font-fmly-prmry;
-  color: @color-bttn-alert;
-  &:hover {
-    border: 2px solid @color-bttn-alert;
-
-  }
-}
-.button-send {
-  width: 200px;
-  height: 45px;
-  border: none;
-  border: 1px solid @color-bttn-alert;
-  color: @color-bttn-alert;
-  background-color: #FFF;
-  font-size: 16px;
-  font-family: @font-fmly-prmry;
-
-  border-radius: 4px;
-  &:hover {
-    background-color: @color-bttn-alert;
-    color: #FFF;
-    cursor: pointer;
-  }
-}
-
 .contnr-lyt-brand {
   // cambiar nombre de clase y llamar parcial lyt
-
   width: 768px;
   height: 60%;
 }
@@ -212,6 +147,30 @@
   border-radius: 50%;
   .image-cover;
 }
+
+
+// Formulario de notificaciones
+
+.contnr-noti {
+  .contnr-max-width(960px, 300px);
+  .align-contnt-flexbox-column(space-evenly);
+  .margin-bttm-contnr(30px);
+}
+
+.contnr-noti .titl-work-popular {
+  // border: 1px solid pink;
+  margin-bottom: initial;
+  .contnr-max-width(678px, 120px);
+
+}
+
+.form-noti {
+  .contnr-max-width(678px);
+  .align-contnt-flexbox-row(space-between);
+  // border: 1px solid orange;
+}
+
+// Oferta
 
 .ofertas {
   .page-max-width(335px);
@@ -252,6 +211,8 @@ p.txt-ofer {
   font-size: 16px;
   display: block;
 }
+
+// Footer main
 
 .footer-main {
   .page-max-width;
