@@ -8,11 +8,16 @@
 @import "base/_typography.less";
 
 
-
 // header
 .header-main {
-  .page-max-width(70px);
+  .page-max-width(65px);
   background-color: @color-bckgrnd;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 3px @color-bckgrnd-cntnr-delay;
 }
 
 .contnr-hedr {
@@ -23,6 +28,7 @@
 
 // hero
 .hero {
+  margin-top: 65px;
   .page-max-width(400px);
   .align-contnt-flexbox-center;
   .margin-bttm-contnr;
@@ -67,17 +73,19 @@
 // categorias
 
 .category {
-  .contnr-max-width(960px);
+  .contnr-max-width(650px);
   .margin-bttm-contnr;
-  // border: 1px solid orange
 }
 
 .header-category {
-  .contnr-header-sectns;
+  .contnr-max-width(500px, 120px);
+  .align-contnt-flexbox-column(space-evenly);
+  .margin-bttm-contnr(30px);
+  .font-header-sections;
 }
 
 .contnr-lyt-category {
-  .contnr-max-width(700px);
+  .contnr-max-width;
 }
 
 .itm-lyt-category {
@@ -111,7 +119,10 @@
 }
 
 .header-popular {
-  .contnr-header-sectns;
+  .contnr-max-width(640px, 120px);
+  .align-contnt-flexbox-column(space-evenly);
+  .margin-bttm-contnr(30px);
+  .font-header-sections;
 }
 
 // marcas productos
@@ -122,20 +133,14 @@
 }
 
 .header-brand {
-  max-width: 345px;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  font-family: @font-fmly-prmry;
-  color: @color-primary;
+  .contnr-into-max-width(345px, 100px);
+  .align-contnt-flexbox-column(space-evenly, flex-start);
+  .font-header-sections;
+  text-align: left;
   margin-right: 50px;
 }
 
 .contnr-lyt-brand {
-  // cambiar nombre de clase y llamar parcial lyt
   width: 768px;
   height: 60%;
 }
@@ -166,16 +171,15 @@
   .margin-bttm-contnr(30px);
 }
 
-.notificaciones .header-noti {
-  .contnr-header-sectns;
-  margin-bottom: initial;
+.header-noti {
   .contnr-max-width(678px, 120px);
+  .align-contnt-flexbox-column(space-evenly);
+  .font-header-sections;
 }
 
 .form-noti {
   .contnr-max-width(678px);
   .align-contnt-flexbox-row(space-between);
-  // border: 1px solid orange;
 }
 
 // Oferta
@@ -236,7 +240,6 @@ p.txt-ofer {
 h1.ttl-item {
   font-size: 20px;
   margin-bottom: 15px;
-
 }
 
 p.descrp-item {
@@ -244,22 +247,25 @@ p.descrp-item {
   margin-bottom: 10px;
 }
 
+div.social-media {
+  height: 40px;
+  width: 80%;
+  .align-contnt-flexbox-row(space-between);
+}
+
+a.item-sm {
+  width: 40px;
+  height: 40px;
+  .align-contnt-flexbox-center;
+  cursor: pointer;
+}
+
+.img-icon-sm {
+  .image-cover;
+}
+
 .copy {
   .page-max-width(50px);
   .align-contnt-flexbox(row);
   background-color: @color-prmry-xtr; 
-}
-
-.social-media {
-  height: 45px;
-  width: 90%;
-  .align-contnt-flexbox-row(space-between);
-}
-
-.itm-sm {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: lightgray;
-  cursor: pointer;
 }

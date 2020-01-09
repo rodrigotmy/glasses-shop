@@ -69,7 +69,7 @@
 }
 
 .contnr-header-sectns() {
-  .contnr-max-width(600px, 120px);
+  .contnr-max-width(auto, 120px);
   .align-contnt-flexbox-column(space-evenly);
   margin-bottom: 30px;
   text-align: center;
@@ -99,4 +99,10 @@
 
 .margin-bttm-contnr(@margin-bttm: @margin-bttm-contnr) {
   margin-bottom: @margin-bttm;
+}
+
+.font-header-sections() {
+  text-align: center;
+  font-family: @font-fmly-prmry;
+  color: @color-primary;
 }
