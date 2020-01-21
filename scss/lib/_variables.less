@@ -1,14 +1,15 @@
 // variables globales
-@font-fmly-prmry: 'Segoe UI';
-@font-fmly-secnd: Arial;
+@font-primary: 'Segoe UI', sans-serif;
+@font-secondary: Arial, sans-serif;
+@font-base: 16px;
 
 @color-primary: #313332;
-@color-secnd: #EAD252;
-@color-prmry-xtr: #252628;
-@color-txt: #FFF;
-@bckgrnd-delay: rgba(0, 0, 0, .2);
+@color-secondary: #EAD252;
+@color-tertiary: #252628;
+@color-white: #FFF;
+@color-black: #000;
 
-// mixing
+// mixins
 @width-contnr: 1024px;
 @height-contnr: auto;
 
@@ -17,26 +18,31 @@
 @direction-row: row;
 @direction-column: column;
 
+@top: 0;
+
+@color-elemts-form: #1F4264;
+// inputs
+@padding-top-bttm: 10px;
+@padding-left: @padding-top-bttm * 2;
+@brd-input: 2px solid;
+@color-input: @color-elemts-form;
+
 // buttons
 @color-bttn-basic: #686868;
-@color-bttn-brd-two: #EAD252;
-@color-bttn-alert: #FC4850;
-@color-bttn-bckgrnd: #FFF;
-@color-bttn-txt: #FFF;
+@color-bttn-txt: @color-white;
 @width-bttn: 150px;
 @height-bttn: 45px;
 @brd-rds-bttn: 4px;
 @brd-bttn: 1px solid;
+@color-bttn-login: #FC4850;
+@color-bttn-signin: @color-elemts-form;
 
 // positions
 @color-bckgrnd-cntnr-delay: rgba(0, 0, 0, .5);
 @brd-rds-cntnr-delay: 4px;
 
 //navbar
-@color-bckgrnd: @color-primary;
-@color-txt-itm: @color-txt;
-@color-itm-hover: @color-secnd;
-@color-bckgrnd-itm-hover: @bckgrnd-delay; 
+@height-navbar: 65px;
 
 @padding-top-body: 65px;
 @color-contnr-ofert: #1F4264; 

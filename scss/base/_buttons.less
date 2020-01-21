@@ -1,36 +1,33 @@
 .button-basic {
   .align-contnt-flexbox-center;
-  width: 150px;
-  height: 45px;
+  width: @width-bttn;
+  height: @height-bttn;
   border: none;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: @brd-rds-bttn;
   color: @color-bttn-txt;
   background-color: @color-bttn-basic;
-  font-family: @font-fmly-prmry;
+  font-family: @font-primary;
   cursor: pointer;
 }
 
 .login {
-  background-color: #FC4850;
+  background-color: @color-bttn-login;
 }
 .signin {
-  background-color: #1F4264;
+  background-color: @color-bttn-signin;
 }
 
 .button-send-noti {
   width: 30%;
-  height: 45px;
+  height: @height-bttn;
   border: none;
-  // border: @brd-bttn @color-bttn-basic;
-  color: #FFF;
-  background-color: @color-bttn-brd-two;
+  color: @color-bttn-txt;
+  background-color: @color-bttn-signin;
   font-size: 17px;
-  font-family: @font-fmly-prmry;
-  border-radius: 4px;
+  font-family: @font-primary;
+  border-radius: @brd-rds-bttn;
   &:hover {
-    // background-color: @color-bttn-basic;
-    // color: #FFF;
     cursor: pointer;
   }
 }

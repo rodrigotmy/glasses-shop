@@ -1,3 +1,4 @@
+// Containers
 .page-max-width(@max-height: @height-contnr) {
   width: 100%;
   height: @max-height;
@@ -10,6 +11,7 @@
   height: @max-height;
 }
 
+// PRIORIDAD ****
 // un mixin para establecer un centrado cuando es un solo contenedor (se aplica a él mismo).
 .contnr-max-width(@max-width: @width-contnr, @max-height: @height-contnr) {
   max-width: @max-width;
@@ -61,7 +63,7 @@
 }
 
 .color-bckgrnd-contnr-delay() {
-  background-color: @bckgrnd-delay;
+  background-color: @color-backgrnd-item-hover;
   top: 0;
   left: 0;
   right: 0;
@@ -73,7 +75,7 @@
   .align-contnt-flexbox-column(space-evenly);
   margin-bottom: 30px;
   text-align: center;
-  font-family: @font-fmly-prmry;
+  font-family: @font-primary;
   color: @color-primary;
 }
 
@@ -85,17 +87,16 @@
   border: @brd-bttn @color-bttn-basic;
   border-radius: @brd-rds-bttn;
   background-color: @color-bttn-basic;
-  color: @color-txt;
+  color: @color-white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-family: @font-fmly-secnd;
+  font-family: @font-secondary;
   &:hover {
     cursor: pointer;
   }
 }
-
 
 .margin-bttm-contnr(@margin-bttm: @margin-bttm-contnr) {
   margin-bottom: @margin-bttm;
@@ -103,6 +104,14 @@
 
 .font-header-sections() {
   text-align: center;
-  font-family: @font-fmly-prmry;
+  font-family: @font-primary;
   color: @color-primary;
+}
+
+.contnr-position-absolute(@p-top: @top) {
+  position: absolute;
+  top: @p-top;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

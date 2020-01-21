@@ -3,7 +3,7 @@
   width: 115px;
   .align-contnt-flexbox-center;
   color: @color-primary;
-  background-color: #FFF;
+  background-color: @color-white;
   border-radius: 4px;
 }
 
@@ -11,7 +11,7 @@
 nav.navbar-main {
   height: inherit;
   width: auto;
-  font-family: @font-fmly-prmry;
+  font-family: @font-primary;
 }
 
 ul.menu-nb {
@@ -19,7 +19,6 @@ ul.menu-nb {
   width: auto;
   display: flex;
   font-size: 15px;
-
 }
 
 ul > li.item-mn {
@@ -35,7 +34,7 @@ a.link-item {
   height: inherit;
   width: inherit;
   text-decoration: none;
-  color: @color-txt-itm;
+  color: @color-white;
 }
 
 a.link-item.link-submenu::after {
@@ -44,21 +43,20 @@ a.link-item.link-submenu::after {
   font-size: 7px;
 }
 
-
 a.active {
-  color: @color-itm-hover;
+  color: @color-secondary;
 }
 
 a.link-item:hover {
-  color: @color-itm-hover;
-  background-color: @color-bckgrnd-itm-hover;
+  color: @color-secondary;
+  background-color: @color-backgrnd-item-hover;
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
 }
 
 ul.submenu {
   display: none;
-  background-color: @color-bckgrnd;
+  background-color: @color-primary;
   width: inherit;
   z-index: 1000;
   border-bottom-left-radius: 4px;
