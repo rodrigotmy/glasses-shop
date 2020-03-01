@@ -52,11 +52,11 @@
   color: #1F4264;
 }
 .logo-web {
-  height: 45px;
-  width: 115px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 45px;
+  width: 115px;
   color: #313332;
   background-color: #FFF;
   border-radius: 4px;
